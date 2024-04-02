@@ -4,4 +4,19 @@
 
 .grid_container {
     pointer-events: none;
+    background-color: grey;
+    height: 960px;
+    width: 960px;
+    max-height: 960px;
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element {
+    height: 60px;
+    width: 60px;
+    background-color: blue;
+    flex: 0 0 auto;
+    pointer-events: auto;
 }
