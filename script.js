@@ -2,8 +2,19 @@ const grid_element = document.createElement("div");
 grid_element.classList.add("element")
 const grid_container = document.querySelector(".grid_container");
 
-function changeColor(event){
-    event.target.style.backgroundColor = "pink";
+function changeColor (event){
+    const rgb_red = Math.floor(Math.random() * 255);
+    const rgb_green = Math.floor(Math.random() * 255);
+    const rgb_blue = Math.floor(Math.random() * 255);
+    const rgb_final =  "#" + rgb_red.toString(16) + rgb_green.toString(16) +rgb_blue.toString(16);
+
+    event.target.style.backgroundColor = rgb_final;
+    var currentOpacity = window.getComputedStyle(event.target).opacity;
+    console.log(currentOpacity);
+    if (currentOpacity > 0.0) {
+        currentOpacity -= 0.1; 
+    }
+    event.target.style.opacity = currentOpacity.toString();
 };
 
 for (let i = 0; i < 16 * 16 ; i++) {

@@ -4,7 +4,7 @@
 
 .grid_container {
     pointer-events: none;
-    background-color: grey;
+    background-color: darkgrey;
     height: 960px;
     width: 960px;
     max-height: 960px;
@@ -16,7 +16,8 @@
 .element {
     height: 60px;
     width: 60px;
-    background-color: blue;
+    background-color: white;
     flex: 0 0 auto;
     pointer-events: auto;
+    opacity: 1;
 }
